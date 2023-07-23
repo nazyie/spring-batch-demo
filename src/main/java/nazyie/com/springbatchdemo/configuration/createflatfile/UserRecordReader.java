@@ -17,6 +17,7 @@ public class UserRecordReader implements ItemReader<User> {
 
     @Override
     public User read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+        System.out.println("=========================== Execute the [UserRecordReader] ===========================");
         return userIterator.hasNext() ? userIterator.next() : null;
     }
 }

@@ -1,13 +1,10 @@
 package nazyie.com.springbatchdemo.configuration.createflatfile;
 
-import org.springframework.context.annotation.Bean;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class User {
 
-    private static int RECORD_COUNT = 5;
     private String name;
     private String email;
     private String address;
@@ -38,6 +35,8 @@ public class User {
 
     public static List<User> generateUserRecords() {
         List<User> users = new ArrayList<>();
+
+        int RECORD_COUNT = 5;
 
         for(int i = 0; i < RECORD_COUNT; i++) {
             User user = new User();
